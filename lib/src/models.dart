@@ -23,7 +23,7 @@ enum DownloadTaskStatus {
   paused;
 
   /// Creates a new [DownloadTaskStatus] from an [int].
-  factory DownloadTaskStatus.fromInt(int value) {
+  static DownloadTaskStatus fromInt(int value) {
     switch (value) {
       case 0:
         return DownloadTaskStatus.undefined;
@@ -43,6 +43,27 @@ enum DownloadTaskStatus {
         throw ArgumentError('Invalid value: $value');
     }
   }
+  // /// Creates a new [DownloadTaskStatus] from an [int].
+  // factory DownloadTaskStatus.fromInt(int value) {
+  //   switch (value) {
+  //     case 0:
+  //       return DownloadTaskStatus.undefined;
+  //     case 1:
+  //       return DownloadTaskStatus.enqueued;
+  //     case 2:
+  //       return DownloadTaskStatus.running;
+  //     case 3:
+  //       return DownloadTaskStatus.complete;
+  //     case 4:
+  //       return DownloadTaskStatus.failed;
+  //     case 5:
+  //       return DownloadTaskStatus.canceled;
+  //     case 6:
+  //       return DownloadTaskStatus.paused;
+  //     default:
+  //       throw ArgumentError('Invalid value: $value');
+  //   }
+  // }
 }
 
 /// Encapsulates all information of a single download task.
